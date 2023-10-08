@@ -1,5 +1,5 @@
 {% set name = "pywaterflood" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pywaterflood-{{ version }}.tar.gz
-  sha256: ba608bef9d5e7506e5d7aa0800bf4de5da26e7e3c3f6e165e4ce9f9ed9fcc869
+  sha256: 3fdb08ac1a5209375aa09b468b3405914d733711797d9efa3d9bfe9cff6426a2
 
 build:
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - {{ PYTHON }} -m pip install . -vv
-  number: 3
+  number: 0
   skip: true  # [py<37]
   skip: true  # [win and python_impl=="pypy"]
 
