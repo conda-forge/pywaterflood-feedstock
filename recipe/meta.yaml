@@ -1,13 +1,13 @@
 {% set name = "pywaterflood" %}
-{% set version = "0.3.3" %}
+{% set version = "0.3.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pywaterflood-{{ version }}.tar.gz
-  sha256: 735806182c55708c53f4988b12d5b41296eb3ded2a2dc23ba1d45ca573afb22e
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pywaterflood-{{ version }}.tar.gz
+  sha256: e8a86bc32ec58b4ae162627c781a83a3ed5088d688fbb540b74702eae9ce46d6
 
 build:
   script:
